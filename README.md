@@ -2,7 +2,7 @@
 
 ## Overview
 A starter project that lets users upload a PDF, embeds its text using sentence-transformers,
-stores embeddings in FAISS, and lets users ask questions. Uses Ollama (llama3) or GPT4All for local LLM responses.
+stores embeddings in FAISS, and lets users ask questions. Use Groq API llama.
 
 This package includes a simple React frontend and a FastAPI backend with a streaming-friendly endpoint.
 
