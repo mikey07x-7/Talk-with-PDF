@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("E:\Ai-tools and Prompt Engineering Projects\ChatwithPDF\frontend\public\bg.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* Glassmorphic Card */
+.glass-card {
+  width: 800px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 255, 255, 0.4);
+  padding: 25px;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 0 0 10px cyan;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.upload-btn {
+  background: linear-gradient(45deg, rgba(0,255,255,0.3), rgba(0,128,255,0.3));
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.upload-btn:hover {
+  background: linear-gradient(45deg, rgba(0,255,255,0.6), rgba(0,128,255,0.6));
+  transform: scale(1.05);
+}
+
+.file-name {
+  font-size: 1rem;
+  color: #cfe8ff;
+  font-style: italic;
+}
+
+/* Chatbox */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+.messages::-webkit-scrollbar-thumb {
+  background: rgba(0,255,255,0.5);
+  border-radius: 6px;
+}
+
+/* Message bubbles */
+.message {
+  margin: 12px 0;
+  padding: 10px 15px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.message.you {
+  align-self: flex-end;
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffeb70;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  margin-left: auto;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background: rgba(0, 255, 255, 0.15);
+  color: #aafaff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.message.system {
+  text-align: center;
+  font-style: italic;
+  color: #a3e7ff;
+}
+
+/* Input box */
+.input-box {
+  display: flex;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.input-box input::placeholder {
+  color: #d2f9ff;
+}
+
+.input-box button {
+  padding: 15px 25px;
+  background: linear-gradient(45deg, #00ffff, #0077ff);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.input-box button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
