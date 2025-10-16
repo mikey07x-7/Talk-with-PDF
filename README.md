@@ -17,11 +17,7 @@ This package includes a simple React frontend and a FastAPI backend with a strea
    ```bash
    pip install -r backend/requirements.txt
    ```
-3. (Optional) Install and run Ollama, then pull llama3 model:
-   - Install Ollama: https://ollama.com/download
-   - `ollama pull llama3`
-   - `ollama serve`
-4. Run backend:
+3. Run backend:
    ```bash
    cd backend
    uvicorn main:app --reload --port 8000
@@ -34,7 +30,3 @@ This package includes a simple React frontend and a FastAPI backend with a strea
    npm start
    ```
 
-## Notes
-- The `backend/utils/ai_utils.py` is configured to call Ollama's local API at http://localhost:11434.
-- If you prefer GPT4All instead, replace the generate call per the README notes.
-- The streaming chat UI uses a simple fetch-based event stream from the backend `/ask_stream` endpoint.
